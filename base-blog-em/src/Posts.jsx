@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-
 //Hook used when we want to fetch data from the server
 import { useQuery, useQueryClient } from "react-query";
 //
@@ -22,7 +21,7 @@ useEffect(()=>{
   queryClient.prefetchQuery(["posts", nextPage],() =>
   fetchPosts(nextPage))
 }
-},[currentPage, queryClient])
+},[currentPage])
 
   const fetchPosts= async (pageNum) => {
     await pause(500);
