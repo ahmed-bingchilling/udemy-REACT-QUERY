@@ -1,10 +1,10 @@
 import "./App.css";
-import { InfinitePeople } from "./people/InfinitePeople";
+//import { InfinitePeople } from "./people/InfinitePeople";
 import { InfiniteSpecies } from "./species/InfiniteSpecies";
 import {QueryClient, QueryClientProvider} from "@tanstack/react-query"
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
-// import withLoadingIndicator from './HOC/withLoadingIndicator'
 
+//The Query Client contains the cache and all our default options
 const queryClient= new QueryClient();
 
 function App() {
@@ -12,8 +12,8 @@ function App() {
     <QueryClientProvider client={queryClient}>
     <div className="App">
       <h1>Infinite SWAPI</h1>
-      <InfinitePeople />
-      {/* <InfiniteSpecies /> */}
+      {/* <InfinitePeople /> */}
+      <InfiniteSpecies />
       <ReactQueryDevtools />
     </div>
     </QueryClientProvider>
